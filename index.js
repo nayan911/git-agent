@@ -83,6 +83,8 @@ const agentBuilder = new StateGraph(MessagesAnnotation)
   .addEdge("toolNode", "llmCall")
   .compile();
 
+  // added some comments
+
   const messages = [
   {
     role: "user",
