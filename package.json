@@ -7,5 +7,12 @@
   },
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "@langchain/google-genai": "^1.0.0",
+    "@langchain/langgraph": "^1.0.1",
+    "child_process": "^1.0.2",
+    "dotenv": "^17.2.3",
+    "zod": "^4.1.12"
+  }
 }
