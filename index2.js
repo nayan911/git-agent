@@ -99,7 +99,12 @@ const gitPush = tool(
     try {
       const branch = execSync("git branch --show-current", { encoding: "utf-8" });
       console.log('branch', branch);
-      execSync("git push", { stdio: "inherit" });
+      try {
+        execSync("git push", { stdio: "inherit" });
+      } catch {}
+      try {
+        execSync(`git push --set-upstream origin ${branch}`, { stdio: "inherit" });
+      } catch {}
       return "✅ Push successful";
     } catch (err) {
       return `❌ Push failed: ${err.message}`;
